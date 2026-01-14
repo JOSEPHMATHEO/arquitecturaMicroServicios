@@ -11,6 +11,10 @@
 |
 */
 
+$router->get('/', function () use ($router) {
+    return response()->json(['message' => 'LumenBooksApi', 'status' => 'running']);
+});
+
 $router->get('/books', 'BookController@index');
 $router->post('/books', 'BookController@store');
 $router->get('/books/{book}', 'BookController@show');

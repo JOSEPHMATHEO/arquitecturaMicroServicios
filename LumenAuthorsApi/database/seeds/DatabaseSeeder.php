@@ -2,6 +2,7 @@
 
 use App\Author;
 use Illuminate\Database\Seeder;
+use Faker\Factory as FakerFactory;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,6 +13,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        factory(Author::class, 50)->create();
+        $faker = FakerFactory::create();
+        for ($i = 0; $i < 50; $i++) {
+            Author::create([
+                'gender' => $gender = $faker->randomElement(['male','female']),
+                'name' => $faker->name($gender),
+                'country' => $faker->country,
+            ]);
+        }
     }
 }

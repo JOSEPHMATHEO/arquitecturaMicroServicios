@@ -1,0 +1,28 @@
+[2026-01-14 02:24:43] local.ERROR: Target [Illuminate\Contracts\Console\Kernel] is not instantiable. {"exception":"[object] (Illuminate\\Contracts\\Container\\BindingResolutionException(code: 0): Target [Illuminate\\Contracts\\Console\\Kernel] is not instantiable. at C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/vendor/illuminate/container/Container.php:1126)
+[stacktrace]
+#0 C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/vendor/illuminate/container/Container.php(921): Illuminate/Container/Container->notInstantiable('Illuminate//Cont...')
+#1 C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/vendor/illuminate/container/Container.php(795): Illuminate/Container/Container->build('Illuminate//Cont...')
+#2 C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/vendor/illuminate/container/Container.php(731): Illuminate/Container/Container->resolve('Illuminate//Cont...', Array)
+#3 C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/vendor/laravel/lumen-framework/src/Application.php(327): Illuminate/Container/Container->make('Illuminate//Cont...', Array)
+#4 C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/artisan(9): Laravel/Lumen/Application->make('Illuminate//Cont...')
+#5 {main}
+"} 
+[2026-01-14 02:30:17] local.ERROR: Class "App\Http\Controllers\Controller" not found {"exception":"[object] (Error(code: 0): Class \"App\\Http\\Controllers\\Controller\" not found at C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/app/Http/Controllers/LibraryController.php:8)
+[stacktrace]
+#0 C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/vendor/composer/ClassLoader.php(576): include()
+#1 C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/vendor/composer/ClassLoader.php(427): {closure:Composer/Autoload/ClassLoader::initializeIncludeClosure():575}('C://Users//sucol//...')
+#2 [internal function]: Composer/Autoload/ClassLoader->loadClass('App//Http//Contro...')
+#3 C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/vendor/illuminate/container/Container.php(912): ReflectionClass->__construct('App//Http//Contro...')
+#4 C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/vendor/illuminate/container/Container.php(795): Illuminate/Container/Container->build('App//Http//Contro...')
+#5 C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/vendor/illuminate/container/Container.php(731): Illuminate/Container/Container->resolve('App//Http//Contro...', Array)
+#6 C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/vendor/laravel/lumen-framework/src/Application.php(327): Illuminate/Container/Container->make('App//Http//Contro...', Array)
+#7 C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(326): Laravel/Lumen/Application->make('App//Http//Contro...')
+#8 C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(284): Laravel/Lumen/Application->callControllerAction(Array)
+#9 C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(269): Laravel/Lumen/Application->callActionOnArrayBasedRoute(Array)
+#10 C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(171): Laravel/Lumen/Application->handleFoundRoute(Array)
+#11 C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(431): Laravel/Lumen/Application->{closure:Laravel/Lumen/Concerns/RoutesRequests::dispatch():167}(Object(Laravel/Lumen/Http/Request))
+#12 C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(167): Laravel/Lumen/Application->sendThroughPipeline(Array, Object(Closure))
+#13 C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(112): Laravel/Lumen/Application->dispatch(NULL)
+#14 C:/Users/sucol/OneDrive/Escritorio/arquitecturaMicroServicios/LumenLibrariesApi/public/index.php(7): Laravel/Lumen/Application->run()
+#15 {main}
+"} 

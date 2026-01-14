@@ -11,6 +11,10 @@
 |
 */
 
+$router->get('/', function () use ($router) {
+    return response()->json(['message' => 'LumenAuthorsApi', 'status' => 'running']);
+});
+
 $router->get('/authors','AuthorController@index');
 $router->post('/authors','AuthorController@store');
 $router->get('/authors/{author}','AuthorController@show');

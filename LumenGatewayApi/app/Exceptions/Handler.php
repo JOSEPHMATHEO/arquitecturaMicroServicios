@@ -82,7 +82,7 @@ class Handler extends ExceptionHandler
             $message = $e->getResponse()->getBody()->getContents();
             $code = $e->getResponse()->getStatusCode();
 
-            return $this->errorMessage($message, $code);
+            return $this->errorResponse($message, $code);
         }
 
         if (env('APP_DEBUG', false)) {

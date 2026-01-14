@@ -11,6 +11,18 @@
 |
 */
 
+$router->get('/', function () use ($router) {
+    return response()->json([
+        'message' => 'LumenGatewayApi', 
+        'status' => 'running',
+        'services' => [
+            'authors' => 'http://localhost:8000/authors',
+            'books' => 'http://localhost:8000/books',
+            'libraries' => 'http://localhost:8000/libraries'
+        ]
+    ]);
+});
+
     /**
      * Authors routes
      */
@@ -30,3 +42,13 @@
     $router->put('/books/{book}', 'BookController@update');
     $router->patch('/books/{book}', 'BookController@update');
     $router->delete('/books/{book}', 'BookController@destroy');
+
+    /**
+     * Libraries routes (forwarded to Libraries microservice)
+     */
+    $router->get('/libraries', 'LibraryController@index');
+    $router->post('/libraries', 'LibraryController@store');
+    $router->get('/libraries/{library}', 'LibraryController@show');
+    $router->put('/libraries/{library}', 'LibraryController@update');
+    $router->patch('/libraries/{library}', 'LibraryController@update');
+    $router->delete('/libraries/{library}', 'LibraryController@destroy');

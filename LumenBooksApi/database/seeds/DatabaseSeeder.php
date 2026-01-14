@@ -2,6 +2,7 @@
 
 use App\Book;
 use Illuminate\Database\Seeder;
+use Faker\Factory as FakerFactory;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,6 +13,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        factory(Book::class,150)->create();
+        $faker = FakerFactory::create();
+        for ($i = 0; $i < 150; $i++) {
+            Book::create([
+                'title' => $faker->sentence(3,true),
+                'description' => $faker->sentence(6,true),
+                'price' => $faker->numberBetween(25,150),
+                'author_id' => $faker->numberBetween(1,50),
+            ]);
+        }
     }
 }
